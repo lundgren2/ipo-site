@@ -1,4 +1,16 @@
 <!doctype html>
+<!--
+  Team IPO + ☕ + ❤️ =
+    ___ ____   ___
+   |_ _|  _ \ / _ \  ___  ___
+    | || |_) | | | |/ __|/ _ \
+    | ||  __/| |_| |\__ \  __/
+   |___|_|    \___(_)___/\___|
+
+  Designed and developed by:
+  Tobias Lundgren, @lundgren2 <tobias(a)ipo.se>
+
+-->
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class() @endphp>
