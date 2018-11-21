@@ -1,0 +1,56 @@
+.page-id-2 .about-section {
+  opacity: 1;
+  transition: opacity 500ms, transform 500ms;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  line-height: 30px;
+  padding: 20px 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+    line-height: 44px;
+    padding: 20px 80px;
+  }
+
+  background: #fff;
+  color: $brand-primary;
+}
+
+.page-id-2 .description-section {
+  margin-bottom: 80px;
+}
+
+.page-id-2 .contact-section {
+  font-size: 14px;
+  text-align: center;
+
+  .img-container {
+    margin: 0 auto 20px auto;
+    width: 60%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .col-6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.pagination {
+  margin-top: 20px;
+  margin-left: 15px;
+
+  .page-item.active {
+    .page-link {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }
+}

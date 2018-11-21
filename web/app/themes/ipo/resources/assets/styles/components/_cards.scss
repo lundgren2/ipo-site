@@ -1,0 +1,125 @@
+.Card__section {
+  .section__title {
+    font-size: 40px;
+  }
+
+  .section__content {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    flex-flow: wrap;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    text-align: center;
+    width: 47%;
+    height: 280px;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(sm) {
+      width: 30%;
+      height: 280px;
+    }
+
+    @include media-breakpoint-up(md) {
+      // width: 25%
+      // padding-bottom: 35%
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 24%;
+      height: 320px;
+    }
+  }
+
+  /* card fronts and backs */
+  .card__front,
+  .card__back {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius-big;
+    padding: 10px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+  }
+
+  .card__front {
+    background-color: #3eaf96;
+  }
+
+  .card__back {
+    background-color: #444;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+
+    .card__text {
+      font-size: 12px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 14px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* card text */
+  .card__text {
+    display: table;
+    width: 100%;
+    align-self: center;
+    color: #fff;
+  }
+
+  /* hover effect */
+  .card.effect__hover:hover .card__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+
+  .card.effect__hover:hover .card__back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  /* click effect */
+  .card.effect__click.flipped .card__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+
+  .card.effect__click.flipped .card__back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  /* random effect */
+  .card.effect__random.flipped .card__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+
+  .card.effect__random.flipped .card__back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  .card__front .card__text {
+    font-size: 20px;
+  }
+}
