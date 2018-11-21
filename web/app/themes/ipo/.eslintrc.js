@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['eslint:recommended',
+  extends: ['eslint:recommended'],
   globals: {
     wp: true,
   },
