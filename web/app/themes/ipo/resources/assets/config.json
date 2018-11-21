@@ -8,8 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/sage",
-  "devUrl": "http://ipo.local",
+  "publicPath": "/app/themes/ipo",
+  "devUrl": "http://ipo-next.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
