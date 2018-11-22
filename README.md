@@ -1,21 +1,13 @@
-# [Bedrock](https://roots.io/bedrock/)
+# IPO.se
+
+[![Build Status](https://travis-ci.org/lundgren2/ipo-site.svg?branch=master)](https://travis-ci.org/lundgren2/ipo-site)
 
 ## Stack
 
-- Bedrock
-- Sage
+- [Bedrock](https://roots.io/bedrock/)
+- [Bedrock](https://roots.io/sage/)
 - MySQL
-
-## Features
-
-- Better folder structure
-- Dependency management with [Composer](http://getcomposer.org)
-- Easy WordPress configuration with environment specific files
-- Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-- Autoloader for mu-plugins (use regular plugins as mu-plugins)
-- Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
-
-See a complete working example in the [roots-example-project.com repo](https://github.com/roots/roots-example-project.com).
+- [Travis CI](https://travis-ci.org/)
 
 ## Requirements
 
@@ -50,35 +42,3 @@ Or, you can cut and paste from the [Roots WordPress Salt Generator][roots-wp-sal
 4. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
 
 5. Access WP admin at `http://example.com/wp/wp-admin`
-
-## Deploys
-
-There are two methods to deploy Bedrock sites out of the box:
-
-- [Trellis](https://github.com/roots/trellis)
-- [bedrock-capistrano](https://github.com/roots/bedrock-capistrano)
-
-Any other deployment method can be used as well with one requirement:
-
-`composer install` must be run as part of the deploy process.
-
-## Documentation
-
-Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
-
-## Community
-
-Keep track of development and community news.
-
-- Participate on the [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-- Listen to the [Roots Radio podcast](https://roots.io/podcast/)
-
-[roots-wp-salt]: https://roots.io/salts.html
-[wp-cli-dotenv]: https://github.com/aaemnnosttv/wp-cli-dotenv-command

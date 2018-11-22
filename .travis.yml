@@ -26,3 +26,5 @@ install:
 
 script:
   - composer test
+  # - cd $TRAVIS_BUILD_DIR
+  # - phpcs --standard=ruleset.xml --extensions=php --ignore=web/wp/,web/app/plugins/,vendor/ -n -s .

@@ -74,7 +74,7 @@
       "php -r \"copy('.env.example', '.env');\""
     ],
     "test": [
-      "phpcs"
+      "vendor/bin/phpcs"
     ]
   }
 }
