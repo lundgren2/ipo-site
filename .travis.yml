@@ -2,29 +2,38 @@ sudo: false
 language: php
 php:
   - 7.1
-  - 7.0
-  - 5.6
-  - nightly
-
 matrix:
   fast_finish: true
   allow_failures:
     - php: nightly
-
+env:
+  global:
+    - THEME_DIR=./web/app/themes/ipo/
 cache:
   apt: true
   directories:
-    - $HOME/.composer/cache
+    - '$HOME/.composer/cache'
+    - '$THEME_DIR/.yarn-cache'
+    - '$THEME_DIR/NODE_MODULES'
     - vendor
-
 before_install:
-  - phpenv config-rm xdebug.ini || true
+  # - openssl aes-256-cbc -K $encrypted_a806083d62ed_key -iv $encrypted_a806083d62ed_iv
+  # -in travis_rsa.enc -out travis_rsa -d
+  - pwd
   - composer self-update
-
+  - export PATH=$HOME/.yarn/bin:$PATH && travis_retry curl -o- -L https://yarnpkg.com/install.sh
+    | bash
 install:
   - composer install -o --prefer-dist --no-interaction
+  - cd $THEME_DIR
+  - node -v && yarn -V
+  - travis_retry yarn
 
 script:
+  - cd $TRAVIS_BUILD_DIR
   - composer test
-  # - cd $TRAVIS_BUILD_DIR
-  # - phpcs --standard=ruleset.xml --extensions=php --ignore=web/wp/,web/app/plugins/,vendor/ -n -s .
+  - cd $THEME_DIR
+  - yarn run test
+  - yarn run build
+  - yarn run rmdist
+  - yarn run "build:production"
