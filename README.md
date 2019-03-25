@@ -5,7 +5,7 @@
 ## Stack
 
 - [Bedrock](https://roots.io/bedrock/)
-- [Bedrock](https://roots.io/sage/)
+- [Sage](https://roots.io/sage/)
 - MySQL
 - [Travis CI](https://travis-ci.org/)
 
